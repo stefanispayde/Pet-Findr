@@ -1,0 +1,26 @@
+{
+  "name": "pet-findr",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "bin": {
+    "pet-findr": "petfinder.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stefanispayde/Pet-Findr.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stefanispayde/Pet-Findr/issues"
+  },
+  "homepage": "https://github.com/stefanispayde/Pet-Findr#readme",
+  "dependencies": {
+    "express": "^4.16.1"
+  }
+}
