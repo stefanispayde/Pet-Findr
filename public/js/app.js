@@ -32,7 +32,6 @@ app.controller('PetController', ['$http', function($http){
 
 
 	this.savePet = function(index){
-		// console.log(petArray[index]);
 		$http({
 			method: 'POST',
 			url: '/members/getPetData',
@@ -45,25 +44,8 @@ app.controller('PetController', ['$http', function($http){
 			// console.log(response);
 		},
 		function(error){
-
 		});
-
-		// Member.wishlist.push(petArray[index]);
 	};
-
-		// console.log(index);
-		// $http({
-		// 	method: 'PUT',
-		// 	url: '/members',
-
-		// }).then(
-  //       function(response){
-  //           console.log(response);
-  //       },
-  //       function(error){
-  //       });
-
-
 
 	this.findShelter = function(){
         $http({
@@ -81,6 +63,4 @@ app.controller('PetController', ['$http', function($http){
         function(error){
         });
     };
-    // this.savePet(0);
-
 }]);

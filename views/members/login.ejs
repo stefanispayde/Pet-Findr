@@ -5,38 +5,36 @@
 	<link rel="stylesheet" type="text/css" href="../../css/main.css">
 	<title>User Login</title>
 </head>
+
 <body class='loginPage'>
-<header>
-	<nav>
-<div>
- 	<ul class='loginNav'>
 
- 	<li>
- 		<a href="/session/register">Register</a>
- 	</li>
-</ul>
+  <header>
+	   <nav>
+      <div>
+ 	      <ul class='loginNav'>
+	         <li><a href="/session/register">Register</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
 
-</div>
-</nav>
-</header>
+  <div class='loginHeader'>
+    <h2>Login</h2>
+      <form class='login' action="/session/login" method="POST">
+       Username: <input type="text" name="username" value="">
+       Password: <input type="password" name="password" value="">
+       <button id="register">Login</button>
+     </form>
+  </div>
 
-<div class='loginHeader'>
-<h2>Login</h2>
-<form class='login' action="/session/login" method="POST">
-   Username: <input type="text" name="username" value="">
-   Password: <input type="password" name="password" value="">
-   <button id="register">Login</button>
-</form>
-</div>
+  <%if(message) {%>
+    <br/>
+    <p><%=message%> </p>
+    <%}%>
 
-<%if(message) {%>
-  <br/>
-  <p><%=message%> </p>
-  <%}%>
+  <footer>
 
-<footer>
+  </footer>
 
-</footer>
-
-</body>
+  </body>
 </html>
