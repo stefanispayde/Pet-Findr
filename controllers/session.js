@@ -7,6 +7,8 @@ router.get('/login', (req, res)=>{
 	res.render('members/login.ejs', {message: req.session.message || ""});
 });
 
+
+
 router.post('/login', (req, res)=>{
 	Member.findOne({username: req.body.username}, (err, user)=>{
 if(user){
@@ -16,7 +18,7 @@ if(user){
 		req.session.logged = true;
 		console.log(req.session);
 
-		res.redirect('/');
+		res.redirect('/members');
 		}else {
 		console.log('else in bcrypt compare');
 		req.session.message = "Username or password is incorrect";
@@ -63,5 +65,7 @@ router.get('/logout', (req, res)=>{
 		}
 	});
 });
+
+
 
 module.exports = router;

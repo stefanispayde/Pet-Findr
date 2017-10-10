@@ -21,19 +21,20 @@
         <div class="row">
           <div class="col-sm-12">
               <div class="header">
-                <h1>Welcome to Pet Finder!</h1>
-                  <!-- <div class="dropdown">
-                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <h1>Welcome To Pet Finder!</h1>
+                <h1 id="byline">Let us help you find your next best friend</h1>
+                  <div class="dropdown">
+                    <!-- <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       Adoption <span class="caret"></span>
-                    </button> -->
+                    </button>
 
-                    <!-- <ul class="dropdown-menu">
+                     <ul class="dropdown-menu">
                       <li><a href="#">Adopt your next pet now</a></li>
                       <li><a href="#">Submit a wishlist for your desired pet</a></li>
                       <li><a href="https://www.petfinder.com/pet-adoption/dog-adoption/the-pet-adoption-guide/">How to care for your new pet</a></li>
-                    </ul> -->
+                    </ul>
 
-                    <!-- <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                     <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       Shelter Information <span class="caret"></span>
                     </button>
 
@@ -54,7 +55,7 @@
                     <ul class="dropdown-menu">
                       <li><a href="/session/login">Log in</a></li>
                       <li><a href="/session/register">Register to be a part of our community</a></li>
-                      <li><a href='/members'>Members</a></li>
+                      <li><a href='/members'>Current Members</a></li>
                       <li><a href='/session/logout'>Log Out</a></li>
                       <li role="separator" class="divider"></li>
                     </ul>
@@ -84,8 +85,6 @@
         		            Name: {{pets.name}}<br/>
         		            Breed: {{pets.breeds}}<br/>
 
-                        <!-- <button ng-click='petCtrl.savePet($index)'>SDLKjf</button> -->
-
                         <img ng-src="{{pets.media.photos['1']['pn']}}">
                         <button ng-click="petCtrl.savePet($index)" type="button" class="btn btn-default">
                           <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
@@ -105,6 +104,7 @@
                    <input class="inputs" ng-model="petCtrl.zippy" type="text" placeholder=" Zip " value="submit">
                    <input class="button" type="submit" submit="submit">
                  </form><br/>
+
                  <ul id='stuff'>
                    <li class='shelter' ng-repeat="shelters in petCtrl.shelters">
                      Shelter Name: {{shelters.name}}<br/>
@@ -124,7 +124,7 @@
 
                     <h3>To learn all about Find A Pet, click .</h3>
 
-                    <button id="mod-btn" type="button" class="btn btn-info " data-toggle="modal" data-target="#myModal">HERE</button>
+                    <button id="mod-btn" type="button" class="btn btn-info " data-toggle="modal" data-target="#myModal">here</button>
 
 <!-- Modal -->
                       <div id="myModal" class="modal fade" role="dialog">
@@ -174,7 +174,7 @@
                   <div class="col-md-4">
                     <div class="image2">
                     <img src="https://peopledotcom.files.wordpress.com/2014/04/dog-cat-600.jpg" class="img-circle"  width="394" height="326">
-                    <a  data-toggle="popover" data-content="that's 11,438 Shelter and rescue members across NORTH AMERICA">In case you were wondering...</a>
+                    <a  class="modal-text" data-toggle="popover" data-content="that's 11,438 Shelter and rescue members across NORTH AMERICA">In case you were wondering...</a>
                     <script>
                     $(document).ready(function(){
                     $('[data-toggle="popover"]').popover();
@@ -186,7 +186,7 @@
                   <div class="col-md-4">
                     <div class="image3">
                       <img src="https://s-media-cache-ak0.pinimg.com/originals/27/e6/b9/27e6b92482185b791ab4539e66bd9434.jpg" class="img-circle" width="324" height="256" />
-                      <a class="clearfix" data-toggle="popover" data-content="we've found loving homes for 25 million pets!">In 20 years of Pet Finder...</a>
+                      <a class="modal-text" data-toggle="popover" data-content="we've found loving homes for 25 million pets!">In 20 years of Pet Finder...</a>
                       <script>
                       $(document).ready(function(){
                       $('[data-toggle="popover"]').popover();
@@ -195,7 +195,6 @@
                     </div>
                   </div>
                 </div>
-              </div>
 
 
 <!-- last section for footer -->
