@@ -17,20 +17,36 @@ h1 {
   text-align: center;
   color: #F7F3DE;
 }
-#byline {
+.byline {
   font-family: 'Quicksand', sans-serif;
-  font-size: 22px;
+  font-size: 26px;
   font-weight: 400;
   text-align: center;
   color: #F7F3DE;
   letter-spacing: 0;
 }
+.btn-info {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 14px;
+  border: none;
+  position: absolute;
+  left: 53%;
+  top: 13%;
+  background: #F7F3DE;
+  color: #303c66;
+}
 .btn-default {
   border: none;
   margin-left: 10px;
   margin-bottom: 5px;
+  display: inline;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 18px;
+  color: #303c66;
+  background-color: #F7F3DE;
+  background-repeat:no-repeat;
+  cursor: pointer;
 }
-
 .dropdown-menu {
   font-size: 12px;
   font-family: 'Quicksand', sans-serif;
@@ -38,75 +54,85 @@ h1 {
   background-color: #F7F3DE;
   color:  #303c66;
 }
+li:hover {
+  background: #b4dfe5;
+}
 h2{
   font-family: 'Crushed', cursive;
-  font-size: 28px;
+  font-size: 24px;
   letter-spacing: 1px;
   color: #303c66;
   text-align: center;
   margin-top: 15px;
 }
-/*h3{
-  font-size: 31px;
-  font-family: 'Crushed', cursive;
-  letter-spacing: 1px;
-  color: #F7F3DE;
-  margin-left: 55px;
-  margin-top:  70px;
-}*/
-    .form-1-background {
-      background-color: #b4dfe5;
-      min-height: 180px;
-    }
-    .form-2-background {
-      background-color: #f4976c;
-      min-height: 130px;
-    }
-
-    .form-1-background, .form-2-background {
-      margin-top: 70px;
-      text-align: center;
-    }
-#popover-txt {
+.form-1-background {
+  background-color: #b4dfe5;
+  min-height: 180px;
+}
+.form-2-background {
+  background-color: #f4976c;
+  min-height: 130px;
+}
+.form-1-background, .form-2-background {
+  margin-top: 30px;
+  text-align: center;
+}
+input.button {
+  background: #F7F3DE;
+  color: #303c66;
+  border: none;
+}
+.popover-txt {
   float: right;
-  font-size: 31px;
+  font-size: 40px;
   font-family: 'Crushed', cursive;
   letter-spacing: 1px;
+  margin-right: 50px;
 }
-
-  .inputs {
-        font-family: 'Quicksand', sans-serif;
-        font-weight: 500;
-        background-color: #F7F3DE;
-        width: 400px;
-        text-align: center;
-        height: 30px;
-        font-size: 16px;
-        color: #303c66;
+.inputs {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 500;
+  background-color: #F7F3DE;
+  width: 400px;
+  text-align: center;
+  font-size: 16px;
+  color: #303c66;
 }
-.button, .btn, #mod-btn {
+ /*.btn {
   font-family: 'Quicksand', sans-serif;
   font-size: 18px;
   color: #303c66;
   background-color: #F7F3DE;
   background-repeat:no-repeat;
-  border: 2px solid #b4dfe5;
-  cursor:pointer;
-}
-#mod-btn {
+  border: none;
+  cursor: pointer;
+}*/
+/*.btn-info {
+  border: none;
   position: absolute;
-  left: 46%;
-  top: 12%;
-}
+  left: 55%;
+  top: 13%;
+}*/
 a {
-font-family: 'Crushed', cursive;
-color: #303c66;
-  font-size: 25px;
+  font-family: 'Quicksand', sans-serif;
+  color: #303c66;
+  font-size: 18px;
   font-weight: 500;
   padding: 20px;
   margin: 10px;
 }
+a:hover {
+  text-decoration: none;
+  opacity: .4;
+}
 .modal-title h4 {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 40px;
+  font-weight: 500;
+  padding: 20px;
+  margin: 10px;
+}
+.modal-text {
   font-family: 'Crushed', cursive;
   color: #303c66;
   font-size: 25px;
@@ -119,11 +145,13 @@ color: #303c66;
 }
 .modal-body p {
   color: #303c66;
-  font-family: 'Crushed', cursive;
+  font-family: 'Quicksand', sans-serif;
   font-size: 20px;
 }
-
 .modal-footer, .modal-header {
+  font-family: 'Crushed', cursive;
+  font-size: 40px;
+  text-align: center;
   background: #303c66;
   color: #b4dfe5;
 }
@@ -133,7 +161,7 @@ color: #303c66;
 }
 .footer{
   min-height: 60px;
-  margin-bottom: 1;
+  /*margin-bottom: 1;*/
 }
 .header, .footer{
   background: #303c66;
@@ -143,15 +171,22 @@ color: #303c66;
   min-height: 200px;
   background: #303c66;
   background-size: cover;
-  margin-top: -45px;
+  margin-top: 25px;
 }
-.intro h3 {
-  font-size: 31px;
+h3 {
+  font-size: 40px;
   font-family: 'Crushed', cursive;
   letter-spacing: 1px;
   color: #F7F3DE;
-  margin-left: 55px;
-  margin-top:  70px;
+  margin-left: 50px;
+  margin-top: 20px;
+}
+#intro2 {
+  min-height: 200px;
+  background-color: #f4976c;;
+  background-size: cover;
+  margin-top: 30px;
+  display: block;
 }
 .image1 {
   margin-top: -125px;
@@ -175,18 +210,11 @@ color: #303c66;
   background: #f4976c;
 }
 
-/* Popover Header */
-/*.popover-title {
-    background-color: coral;
-    opacity: .4
-
-}*/
-
 /* Popover Body */
 .popover-content {
   font-family: 'Quicksand', sans-serif;
     background-color: #f4976c;
-    /*opacity: .5;*/
+    opacity: .5;
     color: #303c66;
     padding: 25px;
     font-size: 26px;
@@ -223,38 +251,6 @@ color: #303c66;
   margin: auto;
   font-weight: bold;
 }
-
-.login {
-  text-align: center;
-  text-decoration: none;
-  font-family: Quicksand;
-}
-
-.loginNav {
-  text-align: center;
-  display: inline;
-  list-style-type: none;
-  text-decoration: none;
-}
-
-.loginNav a {
-  text-decoration: none;
-  font-family: Quicksand;
-  font-size: 15px;
-  display: inline;
-  position: relative;
-  right: 20px;
-}
-
-.loginNav li {
-  display: inline;
-}
-
-.loginPage {
-  text-align: center;
-}
-
-
 /* Twitter */
 .fa-twitter {
     background: #55ACEE;
@@ -295,12 +291,6 @@ color: #303c66;
   color: #b4dfe5;
   z-index: 2;
 }
-/*#page2, h1 {
-  font-family: 'Crushed', cursive;
-  font-size: 65px;
-  text-align: center;
-  color: #F7F3DE;
-}*/
 #page2, .btn-default-login {
   font-family: 'Quicksand', sans-serif;
   font-size: 16px;
@@ -317,20 +307,55 @@ color: #303c66;
   color:  #303c66;
   margin: 0 auto;
 }
-/*#page2, h2{
-  font-family: 'Crushed', cursive;
-  font-size: 28px;
-  letter-spacing: 1px;
-  color: #303c66;
-  text-align: center;
-  margin-top: 15px;
-}*/
 #page2, li {
   list-style: none;
 }
-/*.btn {
-  background-color: #f7f3de;
-  border: #a64ac91px solid;
+
+/**********************
+loggin page2
+**********************/
+#register {
+  col
+}
+.instructions p {
+  text-align: left;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 16px;
+  margin: 25px 30px;
+  color:  #303c66;
+}
+.login {
+  text-align: center;
+  text-decoration: none;
+  font-family: Quicksand;
+  font-size: 20px;
+}
+.loginHeader {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 20px;
+}
+.loginHeader h2{
+  font-family: 'Quicksand', sans-serif;
+  font-size: 28px;
+  text-align: center;
+}
+#indexTitle h1 {
+  text-align: center;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 35px;
   color: #303c66;
-  font-size: 18px;*/
+  letter-spacing: 0px;
+
+}
+.currentMembers {
+  margin: 0 auto;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 24px;
+  color: #f4976c;
+  text-align: center;
+  text-decoration: none;
+}
+.currentMembers :hover {
+  color: #f4976c;
+  opacity: .3;
 }

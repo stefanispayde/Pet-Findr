@@ -14,24 +14,39 @@
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
       <link rel="stylesheet" type="text/css" href="/css/main.css">
     </head>
+    <body ng-controller="PetController as petCtrl">
 
+    <header>
+  		<div class="container">
+  			<div class="row">
+  				<div class="col-sm-12">
+  						<div class="header">
+  							<h1>Welcome To Pet Finder!</h1>
+  							<h1 class="byline">Let us help you find your next best friend</h1>
+  							<div class="dropdown">
+  								<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  									Sign Out <span class="caret"></span>
+  								</button>
+  								<ul class="dropdown-menu">
+  									<li><a href='/session/logout'>Log Out</a></li>
+  									<li><a href="/">Home</a></li>
+  									<li role="separator" class="divider"></li>
+  								</ul>
+  							</div>
+  						</div>
+  					</div>
+  				</div>
+    </header>
 
-  <body ng-controller="PetController as petCtrl">
-    	<ul>
-    		<li>
-    		   <a href="/">Home</a>
-    		</li>
+    <h1 id="indexTitle">Current Members</h1>
 
-  		   <li>
-   				  <a href="/session/logout">Logout</a>
-   			 </li>
-  		</ul>
-
-    <h1>Current Members</h1>
-
+    <ul>
+      <li>
     <% for (let i = 0; i < members.length; i++) {%>
-		    <a href="/members/<%=members[i].id%>"><%= members[i].username %></a> <br/>
+		    <a class="currentMembers" href="/members/<%=members[i].id%>"><%= members[i].username %></a> <br/>
 		<%}%>
+  </li>
+    </ul>
 
     <div class="row">
     <div class="col-md-6">
@@ -50,8 +65,6 @@
           <li class ='petResults' ng-repeat='pets in petCtrl.pets'>
               Name: {{pets.name}}<br/>
               Breed: {{pets.breeds}}<br/>
-
-              <!-- <button ng-click='petCtrl.savePet($index)'>SDLKjf</button> -->
 
               <img ng-src="{{pets.media.photos['1']['pn']}}">
               <button ng-click="petCtrl.savePet($index)" type="button" class="btn btn-default">
